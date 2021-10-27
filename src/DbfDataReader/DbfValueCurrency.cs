@@ -12,9 +12,9 @@ namespace DbfDataReader
 
         public int DecimalCount { get; set; }
 
-        public override void Read(ReadOnlySpan<byte> bytes)
+        public override void Read(byte[] bytes)
         {
-            var value = BitConverter.ToInt64(bytes);
+            var value = BitConverter.ToInt64(bytes,0);
             Value = value / 10000.0f;
         }
 

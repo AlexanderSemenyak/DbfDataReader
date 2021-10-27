@@ -39,7 +39,7 @@ namespace DbfDataReader
 
             if (ColumnType == DbfColumnType.Character)
             {
-                Length =  BitConverter.ToInt16(bytes.Slice(16, 2));
+                Length =  BitConverter.ToInt16(bytes.Slice(16, 2),0);
                 DecimalCount = 0;
             }
             else

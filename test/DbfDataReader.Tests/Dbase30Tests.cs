@@ -1,4 +1,5 @@
-﻿using Shouldly;
+﻿using System.Text;
+using Shouldly;
 using Xunit;
 
 namespace DbfDataReader.Tests

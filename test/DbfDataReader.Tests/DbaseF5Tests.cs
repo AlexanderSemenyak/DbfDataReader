@@ -1,4 +1,5 @@
-﻿using Shouldly;
+﻿using System.Text;
+using Shouldly;
 using Xunit;
 
 namespace DbfDataReader.Tests
@@ -9,7 +10,7 @@ namespace DbfDataReader.Tests
         private const string DbaseF5FixturePath = "../../../../fixtures/dbase_f5.dbf";
 
         // override default encoding to use codepage 1252
-        public DbaseF5Tests() : base(DbaseF5FixturePath, EncodingProvider.GetEncoding(1252))
+        public DbaseF5Tests() : base(DbaseF5FixturePath, CodePagesEncodingProvider.Instance.GetEncoding(1252))
         {
         }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 
 namespace DbfDataReader
 {
@@ -9,7 +10,7 @@ namespace DbfDataReader
         {
         }
 
-        public override void Read(ReadOnlySpan<byte> bytes)
+        public override void Read(byte[] bytes)
         {
             if (bytes[0] == '\0')
             {
@@ -17,8 +18,8 @@ namespace DbfDataReader
             }
             else
             {
-                var datePart = BitConverter.ToInt32(bytes);
-                var timePart = BitConverter.ToInt32(bytes[4..]);
+                var datePart = BitConverter.ToInt32(bytes,0);
+                var timePart = BitConverter.ToInt32(bytes.FromThisToEnd(4),0 /*[4..]*/);
                 Value = new DateTime(1, 1, 1).AddDays(datePart).Subtract(TimeSpan.FromDays(1721426))
                     .AddMilliseconds(timePart);
             }

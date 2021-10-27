@@ -8,7 +8,7 @@ namespace DbfDataReader
 
         int Length { get; }
 
-        void Read(ReadOnlySpan<byte> bytes);
+        void Read(byte[] bytes);
 
         object GetValue();
 

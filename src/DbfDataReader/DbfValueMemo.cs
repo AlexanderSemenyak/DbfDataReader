@@ -13,11 +13,11 @@ namespace DbfDataReader
             _memo = memo;
         }
 
-        public override void Read(ReadOnlySpan<byte> bytes)
+        public override void Read(byte[] bytes)
         {
             if (Length == 4)
             {
-                var startBlock = BitConverter.ToUInt32(bytes);
+                var startBlock = BitConverter.ToUInt32(bytes, 0);
                 Value = _memo.Get(startBlock);
             }
             else

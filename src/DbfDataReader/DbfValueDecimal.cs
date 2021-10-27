@@ -16,7 +16,7 @@ namespace DbfDataReader
 
         public int DecimalCount { get; }
 
-        public override void Read(ReadOnlySpan<byte> bytes)
+        public override void Read(byte[] bytes)
         {
             if (bytes[0] == '\0')
             {

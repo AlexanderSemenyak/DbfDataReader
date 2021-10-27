@@ -10,7 +10,7 @@ namespace DbfDataReader
         {
         }
 
-        public override void Read(ReadOnlySpan<byte> bytes)
+        public override void Read(byte[] bytes)
         {
             var value = Encoding.ASCII.GetString(bytes);
             var nullIdx = value.IndexOf((char)0);

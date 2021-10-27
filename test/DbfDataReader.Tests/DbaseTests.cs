@@ -9,6 +9,11 @@ namespace DbfDataReader.Tests
 {
     public abstract class DbaseTests : IDisposable
     {
+        static DbaseTests()
+        {
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);            
+        }
+
         protected DbaseTests(string fixturePath, Encoding encoding = null)
         {
             FixturePath = fixturePath;

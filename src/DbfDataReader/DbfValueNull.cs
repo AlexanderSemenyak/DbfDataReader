@@ -19,7 +19,7 @@ namespace DbfDataReader
             return null;
         }
 
-        public void Read(ReadOnlySpan<byte> bytes)
+        public void Read(byte[] bytes)
         {
             // do nothing
         }

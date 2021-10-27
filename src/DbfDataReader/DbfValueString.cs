@@ -14,7 +14,7 @@ namespace DbfDataReader
 
         protected readonly Encoding Encoding;
 
-        public override void Read(ReadOnlySpan<byte> bytes)
+        public override void Read(byte[] bytes)
         {
             if (bytes[0] == NullChar)
             {

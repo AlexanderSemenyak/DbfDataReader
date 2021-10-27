@@ -16,7 +16,7 @@ namespace DbfDataReader
 
         public T Value { get; protected set; }
 
-        public abstract void Read(ReadOnlySpan<byte> bytes);
+        public abstract void Read(byte[] bytes);
 
         public object GetValue()
         {

@@ -154,7 +154,7 @@ namespace DbfDataReader
             while (span[start] != Terminator)
             {
                 var slice = span.Slice(start, DbfColumn.DbfColumnSize);
-                var column = new DbfColumn(slice, startField, ordinal, CurrentEncoding);
+                var column = new DbfColumn(new ReadOnlySpan<byte>(slice), startField, ordinal, CurrentEncoding);
                 columns.Add(column);
 
                 ordinal++;

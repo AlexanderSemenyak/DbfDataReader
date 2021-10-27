@@ -8,7 +8,7 @@ namespace DbfDataReader
         {
         }
 
-        public override void Read(ReadOnlySpan<byte> bytes)
+        public override void Read(byte[] bytes)
         {
             var value = bytes[0];
             if (value == 'Y' || value == 'y' || value == 'T' || value == 't')

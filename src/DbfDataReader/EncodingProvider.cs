@@ -6,7 +6,10 @@ namespace DbfDataReader
     {
         static EncodingProvider()
         {
+#if NET40
+#else
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+#endif
         }
 
         public static Encoding GetEncoding(int codePage)

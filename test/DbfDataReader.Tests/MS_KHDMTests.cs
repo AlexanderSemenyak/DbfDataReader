@@ -1,3 +1,4 @@
+using System.Text;
 using Shouldly;
 using Xunit;
 
@@ -10,7 +11,7 @@ namespace DbfDataReader.Tests
 
         // override default encoding to use 1251 codepage
         public MsKhdmTests() 
-            : base(MsKhdmFixturePath, EncodingProvider.GetEncoding(1251))
+            : base(MsKhdmFixturePath, CodePagesEncodingProvider.Instance.GetEncoding(1251))
         {
         }
 
