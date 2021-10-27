@@ -1,6 +1,6 @@
 using System;
 
-namespace DbfDataReader
+namespace Fond.DbfDataReader
 {
     public abstract class Disposable : IDisposable
     {

@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Data.SqlTypes;
 using System.IO;
 using System.Text;
+using Fond.DbfDataReader.Core;
 
-namespace DbfDataReader
+namespace Fond.DbfDataReader
 {
     public class DbfRecord
     {

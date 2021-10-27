@@ -18,6 +18,7 @@
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <MinVerTagPrefix>v</MinVerTagPrefix>
     <LangVersion>latest</LangVersion>
+    <RootNamespace>Fond.DbfDataReader</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

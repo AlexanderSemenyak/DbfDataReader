@@ -5,8 +5,9 @@ using System.Data;
 using System.Data.Common;
 using System.IO;
 using System.Linq;
+using Fond.DbfDataReader.Core;
 
-namespace DbfDataReader
+namespace Fond.DbfDataReader
 {
     public class DbfDataReader : DbDataReader, IDbColumnSchemaGenerator
     {

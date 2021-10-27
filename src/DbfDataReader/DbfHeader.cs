@@ -1,7 +1,8 @@
 ﻿using System;
 using System.IO;
+using Fond.DbfDataReader.Core;
 
-namespace DbfDataReader
+namespace Fond.DbfDataReader
 {
     public class DbfHeader
     {

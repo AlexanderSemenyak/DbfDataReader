@@ -1,9 +1,9 @@
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using Fond.DbfDataReader.Core;
 
-namespace DbfDataReader
+namespace Fond.DbfDataReader
 {
     public class DbfTable : Disposable
     {

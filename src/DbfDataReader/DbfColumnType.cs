@@ -1,4 +1,4 @@
-﻿namespace DbfDataReader
+﻿namespace Fond.DbfDataReader
 {
     public enum DbfColumnType
     {

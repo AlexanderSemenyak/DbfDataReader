@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace DbfDataReader
+﻿namespace Fond.DbfDataReader
 {
     public class DbfValueBoolean : DbfValue<bool?>
     {

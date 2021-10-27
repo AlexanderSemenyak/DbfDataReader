@@ -2,7 +2,7 @@ using System;
 using System.Globalization;
 using System.Text;
 
-namespace DbfDataReader
+namespace Fond.DbfDataReader
 {
     public class DbfValueFloat : DbfValue<float?>
     {

@@ -1,8 +1,7 @@
-﻿using System;
-using System.Globalization;
+﻿using System.Globalization;
 using System.Text;
 
-namespace DbfDataReader
+namespace Fond.DbfDataReader
 {
     public class DbfValueDecimal : DbfValue<decimal?>
     {

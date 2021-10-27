@@ -1,7 +1,7 @@
 using System.IO;
 using System.Text;
 
-namespace DbfDataReader
+namespace Fond.DbfDataReader
 {
     public class DbfMemoDbase3 : DbfMemo
     {

@@ -1,7 +1,7 @@
 using System;
 using System.Text;
 
-namespace DbfDataReader
+namespace Fond.DbfDataReader
 {
     public class DbfValueMemo : DbfValueString
     {

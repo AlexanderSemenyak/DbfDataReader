@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using System.Text;
 
-namespace DbfDataReader
+namespace Fond.DbfDataReader
 {
     internal static class BinaryReaderExtensions
     {

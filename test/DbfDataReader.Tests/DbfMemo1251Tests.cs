@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using Fond.DbfDataReader;
 using Shouldly;
 using Xunit;
 
@@ -16,7 +17,7 @@ namespace DbfDataReader.Tests
             {
                 Encoding = Encoding.GetEncoding("WINDOWS-1251")
             };
-            DbfDataReader = new DbfDataReader(FixturePath, options);
+            DbfDataReader = new Fond.DbfDataReader.DbfDataReader(FixturePath, options);
         }
 
         public void Dispose()
@@ -25,7 +26,7 @@ namespace DbfDataReader.Tests
             DbfDataReader = null;
         }
 
-        public DbfDataReader DbfDataReader { get; set; }
+        public Fond.DbfDataReader.DbfDataReader DbfDataReader { get; set; }
 
         [Fact(Skip = "WIP")]
         public void Should_be_able_to_read_all_the_rows()

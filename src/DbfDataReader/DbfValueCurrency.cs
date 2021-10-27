@@ -1,7 +1,7 @@
 using System;
 using System.Globalization;
 
-namespace DbfDataReader
+namespace Fond.DbfDataReader
 {
     public class DbfValueCurrency : DbfValue<float?>
     {

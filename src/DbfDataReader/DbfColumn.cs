@@ -1,8 +1,8 @@
 using System;
-using System.Data.Common;
 using System.Text;
+using Fond.DbfDataReader.Core;
 
-namespace DbfDataReader
+namespace Fond.DbfDataReader
 {
     public class DbfColumn : DbColumn
     {

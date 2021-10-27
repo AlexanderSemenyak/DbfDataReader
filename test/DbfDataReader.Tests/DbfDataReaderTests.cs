@@ -1,8 +1,11 @@
 using System;
 using System.Data;
 using System.Data.Common;
+using Fond.DbfDataReader;
 using Shouldly;
 using Xunit;
+using DbColumn = Fond.DbfDataReader.Core.DbColumn;
+using DbDataReaderExtensions = Fond.DbfDataReader.Core.DbDataReaderExtensions;
 
 namespace DbfDataReader.Tests
 {
@@ -15,7 +18,7 @@ namespace DbfDataReader.Tests
         [Fact]
         public void Should_have_valid_first_row_values()
         {
-            using (var dbfDataReader = new DbfDataReader(FixturePath))
+            using (var dbfDataReader = new Fond.DbfDataReader.DbfDataReader(FixturePath))
             {
                 dbfDataReader.Read().ShouldBeTrue();
 
@@ -56,7 +59,7 @@ namespace DbfDataReader.Tests
         [Fact]
         public void Should_be_able_to_read_all_the_rows()
         {
-            using (var dbfDataReader = new DbfDataReader(FixturePath))
+            using (var dbfDataReader = new Fond.DbfDataReader.DbfDataReader(FixturePath))
             {
                 var rowCount = 0;
                 while (dbfDataReader.Read())
@@ -78,7 +81,7 @@ namespace DbfDataReader.Tests
             {
                 SkipDeletedRecords = true
             };
-            using (var dbfDataReader = new DbfDataReader(FixturePath, options))
+            using (var dbfDataReader = new Fond.DbfDataReader.DbfDataReader(FixturePath, options))
             {
                 var rowCount = 0;
                 while (dbfDataReader.Read())
@@ -96,7 +99,7 @@ namespace DbfDataReader.Tests
         [Fact]
         public void Should_throw_exception_when_casting_to_wrong_type()
         {
-            using (var dbfDataReader = new DbfDataReader(FixturePath))
+            using (var dbfDataReader = new Fond.DbfDataReader.DbfDataReader(FixturePath))
             {
                 dbfDataReader.Read();
 
@@ -109,16 +112,16 @@ namespace DbfDataReader.Tests
         [Fact]
         public void Should_support_get_column_schema()
         {
-            using (var dbfDataReader = new DbfDataReader(FixturePath))
+            using (var dbfDataReader = new Fond.DbfDataReader.DbfDataReader(FixturePath))
             {
-                dbfDataReader.CanGetColumnSchema().ShouldBeTrue();
+                DbDataReaderExtensions.CanGetColumnSchema(dbfDataReader).ShouldBeTrue();
             }
         }
 
         [Fact]
         public void Should_get_valid_column_schema()
         {
-            using (var dbfDataReader = new DbfDataReader(FixturePath))
+            using (var dbfDataReader = new Fond.DbfDataReader.DbfDataReader(FixturePath))
             {
                 var columns = dbfDataReader.GetColumnSchema();
                 columns.Count.ShouldBe(31);
@@ -141,7 +144,7 @@ namespace DbfDataReader.Tests
         [Fact]
         public void Should_get_typed_values()
         {
-            using (var dbfDataReader = new DbfDataReader(FixturePath))
+            using (var dbfDataReader = new Fond.DbfDataReader.DbfDataReader(FixturePath))
             {
                 var columns = dbfDataReader.GetColumnSchema();
                 columns.Count.ShouldBe(31);
@@ -191,7 +194,7 @@ namespace DbfDataReader.Tests
         [Fact]
         public void Should_get_valid_schema_table()
         {
-            using (var dbfDataReader = new DbfDataReader(FixturePath))
+            using (var dbfDataReader = new Fond.DbfDataReader.DbfDataReader(FixturePath))
             {
                 var schemaTable = dbfDataReader.GetSchemaTable();
                 schemaTable.ShouldNotBeNull();

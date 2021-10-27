@@ -1,8 +1,7 @@
 ﻿using System;
-using System.IO;
-using System.Linq;
+using Fond.DbfDataReader.Core;
 
-namespace DbfDataReader
+namespace Fond.DbfDataReader
 {
     public class DbfValueDateTime : DbfValue<DateTime?>
     {

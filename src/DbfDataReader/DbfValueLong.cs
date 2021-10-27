@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DbfDataReader
+namespace Fond.DbfDataReader
 {
     public class DbfValueLong : DbfValue<long?>
     {
